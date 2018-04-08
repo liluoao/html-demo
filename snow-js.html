@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background:#00a0fc;
+                overflow:hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            //create a snowflake
+            var snowflake=document.createElement('div');
+            snowflake.innerHTML="❆";
+            snowflake.style.cssText="position:absolute;color:#fff;"
+            
+            //get the width and height of screen
+            var documentWidth=window.innerWidth;
+            var documentHeight=window.innerHeight;
+            
+            function createSnowflake() {
+                var createTime=0;
+                // the first timer;
+                setInterval(function() {
+                    // start position of x axis and end position of X axis;  
+                    var startX=Math.random()*documentWidth;
+                    var endX=Math.random()*documentWidth;
+                    
+                    // duration time of each snowflake
+                    var durationTime=4000+7000*Math.random();
+                    
+                    // initial opactiy and end opacity
+                    var startOpacity=0.7+0.3*Math.random();
+                    var endOpacity=0.3+0.3*Math.random();
+                    
+                    // the size of snowflake 
+                    var flakeSize=Math.random()*20+20;
+                    
+                    // clone a snowflake template
+                    var cloneSnowflake=snowflake.cloneNode(true);
+                    // define the style of snowflake by clone
+                    cloneSnowflake.style.cssText+=`
+                        left:${startX}px;
+                        opacity:${startOpacity};
+                        font-size:${flakeSize}px;
+                        top:-25px;
+                        transition:${durationTime}ms;
+                        `;
+                    // append the tag of snowflake to document
+                    document.body.appendChild(cloneSnowflake);
+                    
+                    // the second timer;
+                    setTimeout(function() {
+                        cloneSnowflake.style.cssText+=`
+                            left:${endX}px;
+                            top:${documentHeight}px;
+                            opacity:${endOpacity};
+                            `;
+                        // the third timer;
+                        setTimeout(function() {
+                            cloneSnowflake.remove();
+                        }, durationTime)
+                    }, 0)
+                }, createTime)
+            }
+            createSnowflake();
+        </script>
+    </body>
+</html>

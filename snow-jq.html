@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background: #00a0fc;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        <script>
+            var snowflake=$('<div>').css({
+                'position': 'absolute',
+                'color': '#fff'
+                }).html('❄')
+            
+            var documentWidth=$(document).width();
+            var documentHeight=$(document).height();
+            
+            function createSnow() {
+                var createTime=0;
+                // the first timer
+                setInterval(function() {
+                    var startX=Math.random()*documentWidth;
+                    var endX=Math.random()*documentWidth;
+                    
+                    var startOpacity=0.7+0.3*Math.random();
+                    var endOpacity=0.2+0.2*Math.random();
+                    
+                    var flakeSize=20+Math.random()*20;
+                    
+                    var durationTime=4000+7000*Math.random();
+                
+                    snowflake.clone().appendTo($('body')).css({
+                        'left': startX,
+                        'top': -25,
+                        'opacity': startOpacity,
+                        'font-size': flakeSize
+                    }).animate({
+                        'left': endX,
+                        'top': documentHeight,
+                        'opacity': endOpacity
+                    }, durationTime, function() {
+                        $(this).remove();
+                    })
+                    console.log(1);
+                }, createTime)
+            
+            }
+            createSnow();
+        </script>
+    </body>
+</html>

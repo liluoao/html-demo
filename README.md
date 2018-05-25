@@ -1,6 +1,6 @@
 # 一些效果示例
 
-![https://github.styleci.io/analyses/z9aN5w#](https://github.styleci.io/repos/127072458/shield?branch=master)
+[![](https://github.styleci.io/repos/127072458/shield?branch=master)](https://github.styleci.io/analyses/z9aN5w#)
 
 1. [404页面](https://liluoao.github.io/html-demo/404.html)
 2. [彩色折线](https://liluoao.github.io/html-demo/polyline.html)

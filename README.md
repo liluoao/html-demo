@@ -2,7 +2,7 @@
 
 [![](https://github.styleci.io/repos/127072458/shield?branch=master)](https://github.styleci.io/analyses/z9aN5w#)
 
-1. [404页面](https://liluoao.github.io/html-demo/404.html)
-2. [彩色折线](https://liluoao.github.io/html-demo/polyline.html)
-3. [particlesJS加泡泡效果](https://liluoao.github.io/html-demo/particlesJS-demo.html)
-4. [live2D猫随鼠标摇头](https://liluoao.github.io/html-demo/live2d.html)
+1. [404](https://liluoao.github.io/html-demo/404.html)(From Tencent)
+2. [彩色折线](https://liluoao.github.io/html-demo/polyline.html)(From Evan You)
+3. [particlesJS](https://liluoao.github.io/html-demo/particlesJS-demo.html)泡泡
+4. [live2D](https://liluoao.github.io/html-demo/live2d.html)猫随鼠标摇头
